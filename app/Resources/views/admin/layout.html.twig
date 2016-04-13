@@ -1,0 +1,31 @@
+{#
+   This is the base template of the all backend pages. Since this layout is similar
+   to the global layout, we inherit from it to just change the contents of some
+   blocks. In practice, backend templates are using a three-level inheritance,
+   showing how powerful, yet easy to use, is Twig's inheritance mechanism.
+   See http://symfony.com/doc/current/book/templating.html#template-inheritance-and-layouts
+#}
+{% extends 'base.html.twig' %}
+
+{% block header_navigation_links %}
+    <li>
+        <a href="{{ path('admin_record_index') }}">
+            <i class="fa fa-home"></i> {{ 'menu.homepage'|trans }}
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('admin_record_new') }}">
+            <i class="fa fa-plus"></i> {{ 'menu.new_record'|trans }}
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('admin_record_search') }}">
+            <i class="fa fa-search"></i> {{ 'menu.record_search'|trans }}
+        </a>
+    </li>
+    <li>  
+        <a href="#">
+        <i class="fa fa-user"></i> {{ app.user.username }}
+        </a>
+    </li>
+{% endblock %}
