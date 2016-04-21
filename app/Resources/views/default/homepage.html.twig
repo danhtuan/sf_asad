@@ -1,44 +1,918 @@
-{% extends 'base.html.twig' %}
+<!doctype html>
+<html xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:website="http://ogp.me/ns/website" lang="en-US" itemscope itemtype="http://schema.org/Event" >
+    <head>
 
-{% block body_id 'homepage' %}
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-{#
-    the homepage is a special page which displays neither a header nor a footer.
-    this is done with the 'trick' of defining empty Twig blocks without any content
-#}
-{% block header %}{% endblock %}
-{% block footer %}{% endblock %}
 
-{% block body %}
-    <div class="page-header">
-        <h1>{{ 'title.homepage'|trans|raw }}</h1>
-    </div>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="jumbotron">
-                <p>
-                    {{ 'help.browse_app'|trans|raw }}
-                </p>
-                <p>
-                    <a class="btn btn-primary btn-lg" href="{{ path('blog_index') }}">
-                        <i class="fa fa-users"></i> {{ 'action.browse_app'|trans }}
-                    </a>
-                </p>
+
+        <!-- This is Squarespace. --><!-- frc-osu -->
+        <base href="">
+        <meta charset="utf-8" />
+        <title>Culture Night — Family Resource Center</title>
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
+        <link rel="canonical" href="http://frcokstate.com/events/2016/4/19/culture-night"/>
+        <meta property="og:site_name" content="Family Resource Center"/>
+        <meta property="og:title" content="Culture Night"/>
+        <meta property="og:latitude" content="40.7207559"/>
+        <meta property="og:longitude" content="-74.00076130000002"/>
+        <meta property="og:url" content="http://frcokstate.com/events/2016/4/19/culture-night"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:description" content=""/>
+        <meta property="og:image" content="http://static1.squarespace.com/static/555fdfcde4b006bb686d60df/55613212e4b0e7bb1a71c38c/56954bb9a12f44ec99fb9ac3/1461000399988/13047853_10154163590557704_529788516683805268_o.jpg?format=1000w"/>
+        <meta itemprop="name" content="Culture Night"/>
+        <meta itemprop="url" content="http://frcokstate.com/events/2016/4/19/culture-night"/>
+        <meta itemprop="description" content=""/>
+        <meta itemprop="thumbnailUrl" content="http://static1.squarespace.com/static/555fdfcde4b006bb686d60df/55613212e4b0e7bb1a71c38c/56954bb9a12f44ec99fb9ac3/1461000399988/13047853_10154163590557704_529788516683805268_o.jpg?format=1000w"/>
+        <link rel="image_src" href="http://static1.squarespace.com/static/555fdfcde4b006bb686d60df/55613212e4b0e7bb1a71c38c/56954bb9a12f44ec99fb9ac3/1461000399988/13047853_10154163590557704_529788516683805268_o.jpg?format=1000w" />
+        <meta itemprop="image" content="http://static1.squarespace.com/static/555fdfcde4b006bb686d60df/55613212e4b0e7bb1a71c38c/56954bb9a12f44ec99fb9ac3/1461000399988/13047853_10154163590557704_529788516683805268_o.jpg?format=1000w"/>
+        <meta name="twitter:title" content="Culture Night"/>
+        <meta name="twitter:image" content="http://static1.squarespace.com/static/555fdfcde4b006bb686d60df/55613212e4b0e7bb1a71c38c/56954bb9a12f44ec99fb9ac3/1461000399988/13047853_10154163590557704_529788516683805268_o.jpg?format=1000w"/>
+        <meta name="twitter:url" content="http://frcokstate.com/events/2016/4/19/culture-night"/>
+        <meta name="twitter:card" content="summary"/>
+        <meta name="twitter:description" content=""/>
+        <meta name="description" content="" />
+        <script type="text/javascript" src="//use.typekit.net/ik/reUOmvXFeD8VNE1_QCN5N1fow4MYpvFwq4g5qgTsh2Xfe7J2fFHN4UJLFRbh52jhWD9uFAZqZcFqZQsKw2MhjcJh52ZqFRgqZyTQiaiaOcZkjhNnSasyie90jhNlOeZkjhNnSasyie90jhNlOeZkjkuzSa90SaBujW48Sagyjh90jhNlOfG0Z14ROANDiPoDSWmyScmDSeBRZPoRdhXK2YgkdayTdAIldcNhjPJ4Z1mXiW4yOWgXH6qJ73IbMg6gJMJ7fbKCMsMMeMC6MKG4f5J7IMMjMkMfH6qJtkGbMg6FJMJ7fbKzMsMMeMb6MKG4fOMgIMMj2KMfH6qJnbIbMg6eJMJ7fbK0MsMMegM6MKG4fJCgIMMjgkMfH6qJRMIbMg6sJMJ7fbKTMsMMeM66MKG4fHGgIMMjIKMfH6qJKbIbMg64JMJ7fbKHMsMMegw6MKG4fJZmIMIjMkMfH6qJ6u9bMs6FJMJ7fbKImsMgeMb6MKG4fJmmIMIj2KMfH6qJxubbMs6BJMJ7fbKMmsMgeMv6MKG4fJBmIMIjgkMfH6qJ689bMs6sJMJ7fbKYmsMgeM66MKG4fJymIMIjIKMfqMY8NOhngb.js"></script>
+        <script type="text/javascript">try{Typekit.load(); } catch (e){}</script>
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:700,400"/>
+        <script type="text/javascript">SQUARESPACE_ROLLUPS = {};</script>
+        <script>(function(rollups, name) { if (!rollups[name]) { rollups[name] = {}; } rollups[name].js = ["//static.squarespace.com/universal/scripts-compressed/common-38a9bad3559f1caf3b11-min.js"]; })(SQUARESPACE_ROLLUPS, 'squarespace-common');</script>
+        <script type="text/javascript" data-sqs-type="dynamic-assets-loader">(function() {(function(a){function e(b){ - 1 !== b.indexOf(".js")?document.write("<script " + f + 'type="text/javascript" src="' + b + '">\x3c/script>'):document.write('<link rel="stylesheet" type="text/css" href="' + b + '" />')}var g = function(){var b = window.location.search, a = b.indexOf("exclude="); return - 1 < a && (b = b.substr(a + 8).split("&")[0])?b.split(","):[]}(), f; f = window.__beta_flag_should_defer?'defer="defer" ':""; try{if (window.top != window && window.top.Squarespace && window.top.Squarespace.frameAvailable){window.top.Squarespace.frameAvailable(window,
+                            SQUARESPACE_ROLLUPS); return}} catch (h){console.error(h)}for (var c in a)if (!( - 1 < g.indexOf(c))){if (a[c].js)for (var d = 0; d < a[c].js.length; d++)e(a[c].js[d]); if (a[c].css)for (d = 0; d < a[c].css.length; d++)e(a[c].css[d])}})(SQUARESPACE_ROLLUPS);
+                            })();</script><script type="text/javascript" data-sqs-type="imageloader">(function() {var EXCLUDED_SIZES = function(){var a = window.location.search, b = a.indexOf("exclude_imageloader_sizes="); return - 1 < b && (a = a.substr(b + 26).split("&")[0])?a.split(",").map(function(a){return parseInt(a, 10)}):[]}(), SQUARESPACE_SIZES = [2500, 1500, 1E3, 750, 500, 300, 100].filter(function(a){return - 1 === EXCLUDED_SIZES.indexOf(a)}), IMAGE_LOADING_CLASS = "loading", ImageLoader = new function(){this.load = function(a, b){function c(a, b, d){var c = new Image; c.onload = b; c.onerror = d; c.src = a}a.getDOMNode && (a = a.getDOMNode()); var d = this._getDataFromNode(a,
+                                                b), e = !(!d.dimensions || !d.dimensions.width || !d.dimensions.height), g = d.load + ""; if ("false" === g)return!1; var h = d.mode; if (e && ("fit" == h || "fill" == h)){h = a.parentNode; if (!h)return console.error("Not doing anything, parentNode not found."), !1; if (!this.refresh(a, b, h))return!1}var n = this._intendToLoad(a, d); if ("string" == typeof n && "viewport" !== g){var m = this.getUrl(n, d), g = a.getAttribute("data-image-resolution"); a.getAttribute("src") !== m && this.isValidResolution(n, g) && (a.onload = function(){a.className = a.className.replace(IMAGE_LOADING_CLASS,
+                                                " ").trim(); a.setAttribute("data-image-resolution", n)}, !a.getAttribute("src") && - 1 === a.className.indexOf(IMAGE_LOADING_CLASS) && (a.className += (a.className?" ":"") + IMAGE_LOADING_CLASS), !a.getAttribute("src") && e?(a.setAttribute("src", m), d.useBgImage && (a.parentNode.style.backgroundImage = "url(" + m + ")")):c(m, function(){e?a.setAttribute("src", m):(a.setAttribute("data-image-dimensions", this.width + "x" + this.height), ImageLoader.load(a, b))}, function(){a.className = a.className.replace(IMAGE_LOADING_CLASS, " ").trim();
+                                                a.setAttribute("src", m)})); return!0}return n}; this.refresh = function(a, b, c){a.getDOMNode && (a = a.getDOMNode()); c && c.getDOMNode && (c = c.getDOMNode()); c = c || a.parentNode; if (!c)return console.error("Not doing anything, parentNode not found."), !1; var d = this._getDataFromNode(a, b), e = c.offsetWidth, g = c.offsetHeight; b = d.mode; if ("none" != b){var h = d.dimensions.width, n = d.dimensions.height, m = h / n, q = e / g; if (d.useBgImage && "fill" === b && "backgroundSize"in document.documentElement.style)return a.style.display = "none", c.style.backgroundSize =
+                                                "cover", c.style.backgroundPosition = 100 * d.focalPoint.x + "% " + 100 * d.focalPoint.y + "%", !0; if (d.fixedRatio)"fill" == b && q > m || "fit" == b && q < m?(k = 100, l = 100 * (q / m), r = (100 - l) * d.focalPoint.y, p = 0):(k = 100 * (m / q), l = 100, r = 0, p = (100 - k) * d.focalPoint.x), a.style.top = r + "%", a.style.left = p + "%", a.style.width = k + "%", a.style.height = l + "%"; else{var f; "fill" === b?f = m > q?g / n:e / h:"fit" === b && (f = m < q?g / n:e / h); !d.stretch && "fit" == b && 1 < f && (f = 1); var k = Math.ceil(h * f), l = Math.ceil(n * f); if (0 === k || 0 === l)return!1; var p, r; "fill" === b?(p = Math.min(Math.max(e /
+                                                2 - k * d.focalPoint.x, e - k), 0), r = Math.min(Math.max(g / 2 - l * d.focalPoint.y, g - l), 0)):"fit" === b && (f = d.fitAlignment, p = f.left?0:f.right?e - k:k < e?(e - k) / 2:0, r = f.top?0:f.bottom?g - l:l < g?(g - l) / 2:0, "inline" == this._getStyle(a, "display") && (a.style.fontSize = "0px"), this._resetAlt(a, function(){k -= a.offsetHeight - a.clientHeight; l -= a.offsetWidth - a.clientWidth})); a.style.top = Math.ceil(r) + "px"; a.style.left = Math.ceil(p) + "px"; a.style.width = Math.ceil(k) + "px"; a.style.height = Math.ceil(l) + "px"}p = this._getStyle(c, "position"); a.style.position =
+                                                "relative" == p?"absolute":"relative"; if ("fill" == b && (b = this._getStyle(c, "overflow"), !b || "hidden" != b))c.style.overflow = "hidden"; return!0}}; this._intendToLoad = function(a, b){function c(c, d){"none" === b.mode && (a.style.width = null, a.style.height = null); var e = parseFloat(a.getAttribute(c)), f = parseFloat(e); if (!f || isNaN(f))e = h._getStyle(a, c), f = parseFloat(e); if (!f || isNaN(f))e = h._getStyle(a, "max-" + c, "max" + (c.substr(0, 1).toUpperCase() + c.substr(1))), f = parseFloat(e); if (0 === d || e)switch (h._stringType(e)){case "percentage":d =
+                                                parseInt(e, 10) / 100 * g["offset" + c.substr(0, 1).toUpperCase() + c.substr(1)]; break; case "number":d = parseInt(e, 10)}!f && 0 !== d && !a.getAttribute("src") && (d = 0); return d}b = b || this._getDataFromNode(a); if (!b.source)return!1; var d = a.offsetWidth, e = a.offsetHeight, g = a.parentNode, h = this; this._resetAlt(a, function(){d = c("width", d); e = c("height", e)}); 0 === d && 0 === e?(d = b.dimensions.width, e = b.dimensions.height):0 === d?d = this.getDimensionForValue("width", e, b):0 === e && (e = this.getDimensionForValue("height", d, b)); "viewport" === b.load &&
+                                                (a.style.width = Math.floor(d) + "px", a.style.height = Math.floor(e) + "px"); return this.getSquarespaceSize(d, e, b)}; this._getDataFromNode = function(a, b){b = b || {}; var c = {focalPoint:{x:0.5, y:0.5}, dimensions:{width:null, height:null}, mode:"none", fitAlignment:{center:!0}, load:"true", stretch:!0, fixedRatio:!1}; if (b.focalPoint)c.focalPoint = b.focalPoint; else{var d = a.getAttribute("data-image-focal-point"); if (d && (d = d.split(",")) && 2 == d.length)c.focalPoint = {x:parseFloat(d[0]), y:parseFloat(d[1])}}if (b.dimensions)c.dimensions =
+                                                b.dimensions; else if ((d = a.getAttribute("data-image-dimensions")) && (d = d.split("x")) && 2 == d.length)c.dimensions = {width:parseInt(d[0], 10), height:parseInt(d[1], 10)}; b.mode?c.mode = b.mode:a.parentNode && (d = a.parentNode.className, - 1 !== d.indexOf("content-fill")?c.mode = "fill": - 1 !== d.indexOf("content-fit") && (c.mode = "fit")); if ("fit" === c.mode && a.parentNode && (d = b.fitAlignment || a.getAttribute("data-alignment") || a.parentNode.getAttribute("data-alignment")))c.fitAlignment = {top: - 1 !== d.indexOf("top"), left: - 1 !== d.indexOf("left"),
+                                                center: - 1 !== d.indexOf("center"), right: - 1 !== d.indexOf("right"), bottom: - 1 !== d.indexOf("bottom")}; if (b.load)c.load = b.load; else if (d = a.getAttribute("data-load"))c.load = d; if ("undefined" !== typeof b.stretch)c.stretch = b.stretch; else if (d = a.getAttribute("data-image-stretch"))c.stretch = "true" === d?!0:!1; c.source = b.source?b.source:a.getAttribute("data-src"); if (c.source && ( - 1 !== c.source.indexOf("squarespace.com") || - 1 !== c.source.indexOf("squarespace.net")) && "http:" === c.source.substr(0, 5) && "https" === window.location.protocol.substr(0,
+                                                5))c.source = c.source.replace("http://", "https://"); if (b.fixedRatio)c.fixedRatio = b.fixedRatio; else if (d = a.getAttribute("data-fixed-ratio"))c.fixedRatio = "true" == d; b.useBgImage?c.useBgImage = b.useBgImage:(d = a.getAttribute("data-use-bg-image"), c.useBgImage = "true" === d || !0 === d?!0:!1); return c}; this._stringType = function(a){return"string" === typeof a && - 1 !== a.indexOf("%")?"percentage":isNaN(parseInt(a, 10))?NaN:"number"}; this._getStyle = function(a, b, c){var d; a.currentStyle?d = a.currentStyle[c || b]:window.getComputedStyle &&
+                                                (d = document.defaultView.getComputedStyle(a, null).getPropertyValue(b)); return d}; this._isVisible = function(a){a = a.getBoundingClientRect(); return 0 <= a.left && 0 <= a.top || 0 <= a.bottom && 0 <= a.right || 0 <= a.left && 0 <= a.bottom || 0 <= a.right && 0 <= a.top}; this.getSquarespaceSize = function(a, b, c){a = Math.max(b / (c.dimensions.height / c.dimensions.width), a); "undefined" === typeof app && "number" === typeof window.devicePixelRatio && (a *= window.devicePixelRatio); for (b = 1; b < SQUARESPACE_SIZES.length && !(a > SQUARESPACE_SIZES[b]); b++); return SQUARESPACE_SIZES[b -
+                                        1] + "w"}; this.getDimensionForValue = function(a, b, c){var d = c.dimensions.width; c = c.dimensions.height; return"width" == a?d / c * b:"height" == a?c / d * b:NaN}; this.getUrl = function(a, b){var c = b.source; return a && ("/" == c[0] || - 1 != c.indexOf("squarespace.com") || - 1 != c.indexOf("squarespace.net"))?( - 1 === c.indexOf("format=" + a) && (c = c + ( - 1 !== c.indexOf("?")?"&":"?") + "format=" + a), c):b.source}; this.isValidResolution = function(a, b){a = parseInt(a, 10); b = parseInt(b, 10); return isNaN(a) || isNaN(b)?!0:a > b}; this._resetAlt = function(a, b){var c =
+                                                a.getAttribute("alt"), d = c && 0 < c.length && !a.getAttribute("src"); if (d){var e = a.style.display; a.removeAttribute("alt"); a.style.display = "none"; a.offsetHeight + 0; a.style.display = e}b.call(this); d && a.setAttribute("alt", c)}; this.bootstrap = function(){var a = document.images; if (0 < a.length)for (var b = 0, c = a.length; b < c; b++)((a[b].hasAttribute?a[b].hasAttribute("data-image"):a[b].attributes["data-image"]) || (a[b].hasAttribute?a[b].hasAttribute("data-src"):a[b].attributes["data-src"])) && "false" !== (a[b].getAttribute?a[b].getAttribute("data-load"):
+                                                a[b].attributes["data-load"]) + "" && ImageLoader.load(a[b])}}; window.ImageLoader = ImageLoader; window.YUI && YUI.add("squarespace-imageloader", function(a){});
+                                                })();</script>
+        <script>Static.SQUARESPACE_CONTEXT = {"facebookAppId":"314192535267336", "rollups":{"squarespace-announcement-bar":{"css":"//static.squarespace.com/universal/styles-compressed/announcement-bar-d41d8cd98f00b204e9800998ecf8427e-min.css", "js":"//static.squarespace.com/universal/scripts-compressed/announcement-bar-e4f3b5060834a2726a70-min.js"}, "squarespace-audio-player":{"css":"//static.squarespace.com/universal/styles-compressed/audio-player-76e4bfcc3f9830beb388bae2002fbe6c-min.css", "js":"//static.squarespace.com/universal/scripts-compressed/audio-player-c6144a59f8e406c7c53f-min.js"}, "squarespace-blog-collection-list":{"css":"//static.squarespace.com/universal/styles-compressed/blog-collection-list-d41d8cd98f00b204e9800998ecf8427e-min.css", "js":"//static.squarespace.com/universal/scripts-compressed/blog-collection-list-779e87b8e92cfdea0968-min.js"}, "squarespace-calendar-block-renderer":{"css":"//static.squarespace.com/universal/styles-compressed/calendar-block-renderer-edb9ea58c015fca447b97a2948a5c589-min.css", "js":"//static.squarespace.com/universal/scripts-compressed/calendar-block-renderer-9f37156a7c7661a365ff-min.js"}, "squarespace-chartjs-helpers":{"css":"//static.squarespace.com/universal/styles-compressed/chartjs-helpers-9935a41d63cf08ca108505d288c1712e-min.css", "js":"//static.squarespace.com/universal/scripts-compressed/chartjs-helpers-582133d4cf8b5de60610-min.js"}, "squarespace-comments":{"css":"//static.squarespace.com/universal/styles-compressed/comments-1f59d4986d7ac4ff7beecdce0a67ac1d-min.css", "js":"//static.squarespace.com/universal/scripts-compressed/comments-9909f532299cd536aad2-min.js"}, "squarespace-dialog":{"css":"//static.squarespace.com/universal/styles-compressed/dialog-be200ed7f5c57483743a18984283b649-min.css", "js":"//static.squarespace.com/universal/scripts-compressed/dialog-5d38902193ba6295e871-min.js"}, "squarespace-events-collection":{"css":"//static.squarespace.com/universal/styles-compressed/events-collection-edb9ea58c015fca447b97a2948a5c589-min.css", "js":"//static.squarespace.com/universal/scripts-compressed/events-collection-13ad2e1ab0f208f5111f-min.js"}, "squarespace-gallery-collection-list":{"css":"//static.squarespace.com/universal/styles-compressed/gallery-collection-list-d41d8cd98f00b204e9800998ecf8427e-min.css", "js":"//static.squarespace.com/universal/scripts-compressed/gallery-collection-list-67ebf4b60c339d312b3b-min.js"}, "squarespace-image-zoom":{"css":"//static.squarespace.com/universal/styles-compressed/image-zoom-ae974921915aeccaff8ad60c60e19c31-min.css", "js":"//static.squarespace.com/universal/scripts-compressed/image-zoom-1d2721f09571c710b836-min.js"}, "squarespace-pinterest":{"css":"//static.squarespace.com/universal/styles-compressed/pinterest-d41d8cd98f00b204e9800998ecf8427e-min.css", "js":"//static.squarespace.com/universal/scripts-compressed/pinterest-ffc4919945f0aa92ff92-min.js"}, "squarespace-product-quick-view":{"css":"//static.squarespace.com/universal/styles-compressed/product-quick-view-75150177beb9e55de7724c3cb4e51cb9-min.css", "js":"//static.squarespace.com/universal/scripts-compressed/product-quick-view-929f9909007430711fd1-min.js"}, "squarespace-products-collection-item-v2":{"css":"//static.squarespace.com/universal/styles-compressed/products-collection-item-v2-ae974921915aeccaff8ad60c60e19c31-min.css", "js":"//static.squarespace.com/universal/scripts-compressed/products-collection-item-v2-ef8045cbf7286a18e2a0-min.js"}, "squarespace-products-collection-list-v2":{"css":"//static.squarespace.com/universal/styles-compressed/products-collection-list-v2-ae974921915aeccaff8ad60c60e19c31-min.css", "js":"//static.squarespace.com/universal/scripts-compressed/products-collection-list-v2-b574ce451e7b084abef7-min.js"}, "squarespace-search-page":{"css":"//static.squarespace.com/universal/styles-compressed/search-page-9e3daa07ec7490c2f0be98a39351cb63-min.css", "js":"//static.squarespace.com/universal/scripts-compressed/search-page-d24ef13fcff26377fd05-min.js"}, "squarespace-share-buttons":{"js":"//static.squarespace.com/universal/scripts-compressed/share-buttons-f0e4afd460df99c2e96e-min.js"}, "squarespace-simple-liking":{"css":"//static.squarespace.com/universal/styles-compressed/simple-liking-09fa291ec2800c97714f0d157fd0a6ca-min.css", "js":"//static.squarespace.com/universal/scripts-compressed/simple-liking-1f6d9226911e4c22023a-min.js"}, "squarespace-social-buttons":{"css":"//static.squarespace.com/universal/styles-compressed/social-buttons-954a21287a7f48daedfe691fbda5c07a-min.css", "js":"//static.squarespace.com/universal/scripts-compressed/social-buttons-0b40589e7a3063d2b704-min.js"}, "squarespace-tourdates":{"css":"//static.squarespace.com/universal/styles-compressed/tourdates-d41d8cd98f00b204e9800998ecf8427e-min.css", "js":"//static.squarespace.com/universal/scripts-compressed/tourdates-e38fbe53252623eabbdc-min.js"}}, "pageType":50, "website":{"id":"555fdfcde4b006bb686d60df", "identifier":"frc-osu", "websiteType":1, "contentModifiedOn":1461007565346, "cloneable":false, "siteStatus":{}, "language":"en-US", "timeZone":"America/Chicago", "machineTimeZoneOffset": - 18000000, "timeZoneOffset": - 18000000, "timeZoneAbbr":"CDT", "siteTitle":"Family Resource Center", "siteTagLine":"", "logoImageId":"556184e7e4b08b2ebc697235", "shareButtonOptions":{"3":true, "8":true, "6":true, "4":true, "2":true, "1":true, "7":true, "5":true}, "logoImageUrl":"//static1.squarespace.com/static/555fdfcde4b006bb686d60df/t/556184e7e4b08b2ebc697235/1461007565346/", "authenticUrl":"http://frcokstate.com", "internalUrl":"http://frc-osu.squarespace.com", "baseUrl":"http://frcokstate.com", "primaryDomain":"frcokstate.com", "socialAccounts":[{"serviceId":2, "userId":"100002376709501", "screenname":"OSU Family Resource Center", "addedOn":1432448186904, "profileUrl":"https://www.facebook.com/osufrc", "iconUrl":"http://graph.facebook.com/100002376709501/picture?type=square", "metaData":{"service":"facebook"}, "iconEnabled":true, "serviceName":"facebook"}, {"serviceId":19, "userId":"okstatefrc", "screenname":"okstatefrc", "addedOn":1432614845072, "profileUrl":"http://pinterest.com/okstatefrc", "iconEnabled":true, "serviceName":"pinterest"}, {"serviceId":10, "userId":"1493054044", "userName":"okstatereslife", "screenname":"OSU Residential Life", "addedOn":1433376388353, "profileUrl":"http://instagram.com/okstatereslife", "iconUrl":"https://igcdn-photos-g-a.akamaihd.net/hphotos-ak-xpf1/t51.2885-19/10616999_1481230332160598_139412148_a.jpg", "collectionId":"556f9684e4b03b088b2098db", "iconEnabled":true, "serviceName":"instagram"}], "typekitId":"", "statsMigrated":false}, "websiteSettings":{"id":"555fdfcde4b006bb686d60e2", "websiteId":"555fdfcde4b006bb686d60df", "subjects":[], "country":"US", "state":"OK", "simpleLikingEnabled":true, "mobileInfoBarSettings":{"isContactEmailEnabled":false, "isContactPhoneNumberEnabled":false, "isLocationEnabled":false, "isBusinessHoursEnabled":false}, "announcementBarSettings":{"style":2, "text":"<p>Culture Night on April 19 at 7 pm! ---- Ice Cream Social on April 22 at 7pm!</p>"}, "lastAgreedTermsOfService":2, "defaultPostFormat":"%y/%m/%d/%t", "commentLikesAllowed":true, "commentAnonAllowed":true, "commentThreaded":true, "commentApprovalRequired":false, "commentAvatarsOn":true, "commentSortType":2, "commentFlagThreshold":0, "commentFlagsAllowed":true, "commentEnableByDefault":true, "commentDisableAfterDaysDefault":0, "disqusShortname":"", "homepageTitleFormat":"%s", "collectionTitleFormat":"%c \u2014 %s", "itemTitleFormat":"%i \u2014 %s", "commentsEnabled":true, "contactPhoneNumber":"", "allowSquarespacePromotion":true, "storeSettings":{"returnPolicy":null, "termsOfService":null, "privacyPolicy":null, "orderRefundedSubjectFormat":"%s: Order #%o Refunded", "orderRefundedTitleFormat":"Order Refunded: #%o", "paymentSettings":{}, "expressCheckout":false, "useLightCart":false, "showNoteField":false, "currenciesSupported":["USD", "CAD", "GBP", "AUD", "EUR", "CHF"], "defaultCurrency":"USD", "selectedCurrency":"USD", "measurementStandard":1, "showCustomCheckoutForm":false, "enableMailingListOptInByDefault":true, "businessName":"Your Site Title", "sameAsRetailLocation":false, "businessId":"", "stripeConnected":false, "storeState":3, "isLive":false}, "useEscapeKeyToLogin":false, "ssBadgeType":1, "ssBadgePosition":4, "ssBadgeVisibility":1, "ssBadgeDevices":1, "pinterestOverlayOptions":{"mode":"disabled"}}, "websiteCloneable":false, "collection":{"title":"Events", "id":"55613212e4b0e7bb1a71c38c", "fullUrl":"/events/", "type":1}, "item":{"title":"Culture Night", "id":"56954bb9a12f44ec99fb9ac3", "fullUrl":"/events/2016/4/19/culture-night", "publicCommentCount":0, "commentState":1, "recordType":12}, "subscribed":false, "appDomain":"squarespace.com", "secureDomain":"https://frc-osu.squarespace.com", "templateTweakable":true, "tweakJSON":{"gallery-style":"Fill", "galleryPadding":"10px", "product-gallery-auto-crop":"true", "product-image-auto-crop":"true", "thumbnail-aspect-ratio":"Auto", "thumbnailWidth":"360px"}, "templateId":"4f9adc1524ac5df956fdf98f", "pageFeatures":[1, 2, 4], "impersonatedSession":false, "demoCollections":[{"collectionId":"5217a847e4b000bbb34ae46e", "deleted":true}, {"collectionId":"4f9adbe124ac5df956fdf904", "deleted":true}, {"collectionId":"502574d384aeab0e9130621f", "deleted":true}, {"collectionId":"4f9adbe124ac5df956fdf905", "deleted":true}, {"collectionId":"4f9adbe124ac5df956fdf906", "deleted":true}], "isFacebookTab":false, "tzData":{"zones":[[ - 360, "US", "C%sT", null]], "rules":{"US":[[1967, 2006, null, "Oct", "lastSun", "2:00", "0", "S"], [1987, 2006, null, "Apr", "Sun>=1", "2:00", "1:00", "D"], [2007, "max", null, "Mar", "Sun>=8", "2:00", "1:00", "D"], [2007, "max", null, "Nov", "Sun>=1", "2:00", "0", "S"]]}}};</script><script type="text/javascript"> SquarespaceFonts.loadViaContext(); Squarespace.load(window);</script><!--[if gte IE 9]> <link rel="stylesheet" type="text/css" href="//static1.squarespace.com/static/sitecss/555fdfcde4b006bb686d60df/19/4f9adc1524ac5df956fdf98f/555fe1f6e4b08f92bdb09f2b/823-05142015/1456168490181/site.css?&filterFeatures=false&part=1"/><link rel="stylesheet" type="text/css" href="//static1.squarespace.com/static/sitecss/555fdfcde4b006bb686d60df/19/4f9adc1524ac5df956fdf98f/555fe1f6e4b08f92bdb09f2b/823-05142015/1456168490181/site.css?&filterFeatures=false&part=2"/><link rel="stylesheet" type="text/css" href="//static1.squarespace.com/static/sitecss/555fdfcde4b006bb686d60df/19/4f9adc1524ac5df956fdf98f/555fe1f6e4b08f92bdb09f2b/823-05142015/1456168490181/site.css?&filterFeatures=false&part=3"/><link rel="stylesheet" type="text/css" href="//static1.squarespace.com/static/sitecss/555fdfcde4b006bb686d60df/19/4f9adc1524ac5df956fdf98f/555fe1f6e4b08f92bdb09f2b/823-05142015/1456168490181/site.css?&filterFeatures=false&part=4"/><![endif]-->
+        
+        <!--[if lt IE 9]><script src="//static.squarespace.com"></script><link rel="stylesheet" type="text/css" href="//static1.squarespace.com/static/sitecss/555fdfcde4b006bb686d60df/19/4f9adc1524ac5df956fdf98f/555fe1f6e4b08f92bdb09f2b/823-05142015/1456168490181/site.css?&filterFeatures=false&noMedia=true&part=1"/><link rel="stylesheet" type="text/css" href="//static1.squarespace.com/static/sitecss/555fdfcde4b006bb686d60df/19/4f9adc1524ac5df956fdf98f/555fe1f6e4b08f92bdb09f2b/823-05142015/1456168490181/site.css?&filterFeatures=false&noMedia=true&part=2"/><link rel="stylesheet" type="text/css" href="//static1.squarespace.com/static/sitecss/555fdfcde4b006bb686d60df/19/4f9adc1524ac5df956fdf98f/555fe1f6e4b08f92bdb09f2b/823-05142015/1456168490181/site.css?&filterFeatures=false&noMedia=true&part=3"/><link rel="stylesheet" type="text/css" href="//static1.squarespace.com/static/sitecss/555fdfcde4b006bb686d60df/19/4f9adc1524ac5df956fdf98f/555fe1f6e4b08f92bdb09f2b/823-05142015/1456168490181/site.css?&filterFeatures=false&noMedia=true&part=4"/><![endif]-->
+        <!--[if !IE]> --><script type="text/javascript">if (window.location.search.indexOf('filterFeatures=true') > - 1){document.write('<link rel="stylesheet" type="text/css" href="//static1.squarespace.com/static/sitecss/555fdfcde4b006bb686d60df/19/4f9adc1524ac5df956fdf98f/555fe1f6e4b08f92bdb09f2b/823-05142015/1456168490181/site.css?&filterFeatures=true"/>'); } else{document.write('<link rel="stylesheet" type="text/css" href="//static1.squarespace.com/static/sitecss/555fdfcde4b006bb686d60df/19/4f9adc1524ac5df956fdf98f/555fe1f6e4b08f92bdb09f2b/823-05142015/1456168490181/site.css?&filterFeatures=false"/>'); }</script><!-- <![endif]-->
+        <!-- End of Squarespace Headers -->
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    </head>
+    <body class="sidebar-text-alignment-left sidebar-position-left sidebar-fixed mobile-site-title-style-auto blog-sidebar-right gallery-style-fill  initial-gallery-view-slideshow homepage-gallery-view-inherit thumbnail-aspect-ratio-auto gallery-controls-simple social-icon-style-normal hide-social-icons show-category-navigation product-list-titles-under product-list-alignment-center product-item-size-23-standard-vertical product-image-auto-crop product-gallery-size-11-square product-gallery-auto-crop show-product-price show-product-item-nav product-social-sharing  event-show-past-events event-thumbnails event-thumbnail-size-32-standard event-date-label  event-list-show-cats event-list-date event-list-time event-list-address   event-icalgcal-links  event-excerpts  event-item-back-link     hide-opentable-icons opentable-style-dark newsletter-style-dark small-button-style-solid small-button-shape-square medium-button-style-solid medium-button-shape-square large-button-style-solid large-button-shape-square button-style-solid button-corner-style-square tweak-product-quick-view-button-style-floating tweak-product-quick-view-button-position-bottom tweak-product-quick-view-lightbox-excerpt-display-truncate tweak-product-quick-view-lightbox-show-arrows tweak-product-quick-view-lightbox-show-close-button tweak-product-quick-view-lightbox-controls-weight-light native-currency-code-usd view-item collection-55613212e4b0e7bb1a71c38c collection-layout-default collection-type-events mobile-style-available" id="item-56954bb9a12f44ec99fb9ac3">
+
+        <div id="canvasWrapper">
+            <div id="canvas">
+
+                <div id="mobileNav"><div class="wrapper">
+                        <nav class="main-nav mobile-nav"><ul>
+
+
+
+
+                                <li class="page-collection">
+
+
+                                    <a href="/hub/">The Hub</a>
+
+
+
+
+                                </li>
+
+
+
+
+
+
+
+
+
+                                <li class="mobile-folder">
+                                    <a href="/neighborhoods-1/">Neighborhoods</a>
+                                    <ul>
+
+
+                                        <li class="page-collection">
+
+
+                                            <a href="/brumley/">Brumley</a>
+
+
+
+
+                                        </li>
+
+
+
+                                        <li class="page-collection">
+
+
+                                            <a href="/demaree/">Demaree</a>
+
+
+
+
+                                        </li>
+
+
+
+                                        <li class="page-collection">
+
+
+                                            <a href="/prosser/">Prosser</a>
+
+
+
+
+                                        </li>
+
+
+
+                                        <li class="page-collection">
+
+
+                                            <a href="/demaree-1/">Stevens</a>
+
+
+
+
+                                        </li>
+
+
+
+                                        <li class="page-collection">
+
+
+                                            <a href="/west/">West</a>
+
+
+
+
+                                        </li>
+
+
+
+                                        <li class="page-collection">
+
+
+                                            <a href="/williams/">Williams</a>
+
+
+
+
+                                        </li>
+
+
+                                    </ul>
+                                </li>
+
+
+
+
+
+
+
+
+
+                                <li class="page-collection">
+
+
+                                    <a href="/new-page-2/">Resident Spotlight</a>
+
+
+
+
+                                </li>
+
+
+
+
+
+
+
+
+
+                                <li class="page-collection">
+
+
+                                    <a href="/youth-family-programming/">Youth & Family Programs</a>
+
+
+
+
+                                </li>
+
+
+
+
+
+
+
+
+
+                                <li class="page-collection">
+
+
+                                    <a href="/community-development/">Community Development</a>
+
+
+
+
+                                </li>
+
+
+
+
+
+
+
+
+
+                                <li class="mobile-folder">
+                                    <a href="/media/">Our Media</a>
+                                    <ul>
+
+
+                                        <li class="page-collection">
+
+
+                                            <a href="/about/">About</a>
+
+
+
+
+                                        </li>
+
+
+
+                                        <li class="page-collection">
+
+
+                                            <a href="/newsline/">Newsline</a>
+
+
+
+
+                                        </li>
+
+
+
+                                        <li class="page-collection">
+
+
+                                            <a href="/new-page/">In Between The Lines</a>
+
+
+
+
+                                        </li>
+
+
+
+                                        <li class="page-collection">
+
+
+                                            <a href="/new-page-1/">Photo Album</a>
+
+
+
+
+                                        </li>
+
+
+                                    </ul>
+                                </li>
+
+
+
+
+
+
+
+
+
+                                <li class="mobile-folder">
+                                    <a href="/resources/">Resources</a>
+                                    <ul>
+
+
+                                        <li class="page-collection">
+
+
+                                            <a href="/upcoming-events/">Calendar</a>
+
+
+
+
+                                        </li>
+
+
+
+                                        <li class="page-collection">
+
+
+                                            <a href="/helpful-information/">Helpful Information</a>
+
+
+
+
+                                        </li>
+
+
+                                    </ul>
+                                </li>
+
+
+
+
+
+
+
+
+
+                                <li class="page-collection">
+
+
+                                    <a href="/staff/">The FRC Family</a>
+
+
+
+
+                                </li>
+
+
+
+
+
+
+
+
+
+                                <li class="page-collection">
+
+
+                                    <a href="/contact-wells/">Connect With Us</a>
+
+
+
+
+                                </li>
+
+
+
+
+
+
+                            </ul>
+                        </nav>
+                        <nav class="main-nav mobile-nav"><ul>
+
+                            </ul>
+                        </nav>
+                    </div></div>
+
+                <div id="headerWrapper">
+                    <header id="header">
+
+                        <div id="topNavMobile">
+                            <nav id="mobileMenuLink" class="main-nav clear"><ul><li class="active-link"><a>Menu</a></li></ul></nav>
+                        </div>
+
+                        <div id="logo" data-content-field="site-title">
+
+                            <h1 class="logo image">
+                                <a href="/">
+
+                                    <img src="//static1.squarespace.com/static/555fdfcde4b006bb686d60df/t/556184e7e4b08b2ebc697235/1461007565346/?format=750w" alt="Family Resource Center" />
+
+                                </a>
+                            </h1>
+
+
+                        </div>
+
+                        <script>
+                            Y.use('squarespace-ui-base', function(Y) {
+                            Y.one("h1.logo").plug(Y.Squarespace.TextShrink);
+                            });        </script>
+
+                        <div id="topNav" data-content-field="navigation">
+                            <nav id="mainNavigation" class="main-nav dropdown-click desktop-nav">
+                                <ul>
+
+
+                                    <li class="page-collection">
+
+
+
+
+                                        <a href="/hub/">The Hub</a>
+
+
+
+
+
+
+
+                                    </li>
+
+
+
+                                    <li class="folder-collection folder">
+
+
+
+                                        <a>Neighborhoods</a>
+                                        <div class="subnav">
+                                            <ul>
+
+
+                                                <li class="page-collection">
+                                                    <a href="/brumley/">Brumley</a>
+                                                </li>
+
+
+
+
+                                                <li class="page-collection">
+                                                    <a href="/demaree/">Demaree</a>
+                                                </li>
+
+
+
+
+                                                <li class="page-collection">
+                                                    <a href="/prosser/">Prosser</a>
+                                                </li>
+
+
+
+
+                                                <li class="page-collection">
+                                                    <a href="/demaree-1/">Stevens</a>
+                                                </li>
+
+
+
+
+                                                <li class="page-collection">
+                                                    <a href="/west/">West</a>
+                                                </li>
+
+
+
+
+                                                <li class="page-collection">
+                                                    <a href="/williams/">Williams</a>
+                                                </li>
+
+
+
+                                            </ul>
+                                        </div>
+
+
+
+                                    </li>
+
+
+
+                                    <li class="page-collection">
+
+
+
+
+                                        <a href="/new-page-2/">Resident Spotlight</a>
+
+
+
+
+
+
+
+                                    </li>
+
+
+
+                                    <li class="page-collection">
+
+
+
+
+                                        <a href="/youth-family-programming/">Youth & Family Programs</a>
+
+
+
+
+
+
+
+                                    </li>
+
+
+
+                                    <li class="page-collection">
+
+
+
+
+                                        <a href="/community-development/">Community Development</a>
+
+
+
+
+
+
+
+                                    </li>
+
+
+
+                                    <li class="folder-collection folder">
+
+
+
+                                        <a>Our Media</a>
+                                        <div class="subnav">
+                                            <ul>
+
+
+                                                <li class="page-collection">
+                                                    <a href="/about/">About</a>
+                                                </li>
+
+
+
+
+                                                <li class="page-collection">
+                                                    <a href="/newsline/">Newsline</a>
+                                                </li>
+
+
+
+
+                                                <li class="page-collection">
+                                                    <a href="/new-page/">In Between The Lines</a>
+                                                </li>
+
+
+
+
+                                                <li class="page-collection">
+                                                    <a href="/new-page-1/">Photo Album</a>
+                                                </li>
+
+
+
+                                            </ul>
+                                        </div>
+
+
+
+                                    </li>
+
+
+
+                                    <li class="folder-collection folder">
+
+
+
+                                        <a>Resources</a>
+                                        <div class="subnav">
+                                            <ul>
+
+
+                                                <li class="page-collection">
+                                                    <a href="/upcoming-events/">Calendar</a>
+                                                </li>
+
+
+
+
+                                                <li class="page-collection">
+                                                    <a href="/helpful-information/">Helpful Information</a>
+                                                </li>
+
+
+
+                                            </ul>
+                                        </div>
+
+
+
+                                    </li>
+
+
+
+                                    <li class="page-collection">
+
+
+
+
+                                        <a href="/staff/">The FRC Family</a>
+
+
+
+
+
+
+
+                                    </li>
+
+
+
+                                    <li class="page-collection">
+
+
+
+
+                                        <a href="/contact-wells/">Connect With Us</a>
+
+
+
+
+
+
+
+                                    </li>
+
+
+                                </ul>
+
+                            </nav>
+
+                            <nav id="secondaryNavigation" class="main-nav dropdown-click desktop-nav">
+                                <ul>
+
+                                </ul>
+
+                            </nav>
+                        </div>
+
+                        <div class="sqs-layout sqs-grid-1 columns-1 empty" data-layout-label="Header Content" data-type="block-field" id="headerBlocks"><div class="row sqs-row"><div class="col sqs-col-1 span-1"></div></div></div>
+
+
+
+                        <div id="footerBlocks-2" class="social-links" data-content-field="connected-accounts">
+                            <a href="https://www.facebook.com/osufrc" target="_blank" class="social-facebook"></a><a href="http://pinterest.com/okstatefrc" target="_blank" class="social-pinterest"></a><a href="http://instagram.com/okstatereslife" target="_blank" class="social-instagram"></a>
+                        </div>
+
+
+
+                    </header>
+                </div>
+
+                <div id="pageWrapper" class="hfeed" role="main">
+                    <!-- CATEGORY NAV -->
+
+                    <section id="page">
+
+                        <div class="main-content" data-content-field="main-content">
+                            <div class="sqs-events-collection-item">
+
+                                <a href="/events/?view=calendar&month=April-2016" class="eventitem-backlink"></a>
+
+
+                                <article class="eventitem " id="article-56954bb9a12f44ec99fb9ac3" data-item-id="56954bb9a12f44ec99fb9ac3">
+
+                                    <div class="eventitem-column-meta">
+
+                                        <h1 class="eventitem-title">Culture Night</h1>
+
+                                        <ul class="eventitem-meta event-meta event-meta-date-time-container">
+
+
+
+                                            <li class="eventitem-meta-item eventitem-meta-date event-meta-item">
+                                                <time class="event-date" datetime="2016-04-19">Tuesday, April 19, 2016</time>
+                                            </li>
+
+                                            <li class="eventitem-meta-item eventitem-meta-time event-meta-item">
+                                                <span class="event-time-12hr">
+                                                    <time class="event-time-12hr-start" datetime="2016-04-19"> 7:00pm</time>
+                                                    <span class="event-datetime-divider"></span>
+                                                    <time class="event-time-12hr-end" datetime="2016-04-19"> 8:00pm</time>
+                                                </span>
+                                                <span class="event-time-24hr">
+                                                    <time class="event-time-24hr-start" datetime="2016-04-19">19:00</time>
+                                                    <span class="event-datetime-divider"></span>
+                                                    <time class="event-time-12hr-end" datetime="2016-04-19">20:00</time>
+                                                </span>
+                                            </li>
+
+
+
+                                        </ul>
+
+
+
+
+
+                                        <ul class="eventitem-meta event-meta event-meta-addtocalendar-container">
+                                            <li class="eventitem-meta-item eventitem-meta-export event-meta-item">
+                                                <a href="http://www.google.com/calendar/event?action=TEMPLATE&text=Culture+Night&dates=20160420T000000Z/20160420T010000Z" class="eventitem-meta-export-google"></a>
+                                                <span class="eventitem-meta-export-divider"></span>
+                                                <a href="/events/2016/4/19/culture-night?format=ical" class="eventitem-meta-export-ical"></a>
+                                            </li>
+                                        </ul>
+                                        
+                                        <ul>
+                                            <a class ="btn btn-primary" href="/en/event/register">Register</a>
+                                            <a class ="btn btn-primary" href="/en/event/admin">Admin</a>
+                                        </ul>
+
+
+
+
+                                    </div>
+
+                                    <div class="eventitem-column-content">
+
+                                        <div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Post Body" data-type="item" data-updated-on="1452624849470" id="item-56954bb9a12f44ec99fb9ac3"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1460998372242_24517"><div class="sqs-block-content">
+                                                            <div class="image-block-outer-wrapper layout-caption-below ">
+
+                                                                <div class="intrinsic" style="max-width:640.0px;">
+
+                                                                    <div style="padding-bottom:150.0%;" class="image-block-wrapper   has-aspect-ratio" data-description="">
+                                                                        <noscript><img src="http://static1.squarespace.com/static/555fdfcde4b006bb686d60df/t/5715172e2eeb810fe8fb3732/1460999990842/"  /></noscript><img class="thumb-image" data-src="http://static1.squarespace.com/static/555fdfcde4b006bb686d60df/t/5715172e2eeb810fe8fb3732/1460999990842/" data-image="http://static1.squarespace.com/static/555fdfcde4b006bb686d60df/t/5715172e2eeb810fe8fb3732/1460999990842/" data-image-dimensions="640x960" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="5715172e2eeb810fe8fb3732" data-type="image" />
+                                                                    </div>
+
+
+
+
+                                                                </div>
+
+                                                            </div>
+                                                        </div></div></div></div></div>
+
+
+                                        <div class="eventitem-content-footer">
+
+
+
+
+
+                                            <div class="eventitem-meta event-meta event-meta-socialicon-container">
+                                                <span class="sqs-simple-like" data-item-id="56954bb9a12f44ec99fb9ac3" data-like-count="0">
+                                                    <span class="like-icon"></span>
+                                                    <span class="like-count"></span>
+                                                </span>
+
+                                                <span class="squarespace-social-buttons inline-style" data-system-data-id="1461000393335-8ZH79WIVSFCLEXKG82VW" data-asset-url="http://static1.squarespace.com/static/555fdfcde4b006bb686d60df/55613212e4b0e7bb1a71c38c/56954bb9a12f44ec99fb9ac3/1461000399988/13047853_10154163590557704_529788516683805268_o.jpg" data-record-type="12" data-full-url="/events/2016/4/19/culture-night" data-title="Culture Night"></span></div>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="clear"></div>
+
+                                </article>
+
+
+
+                                <div class="clear"></div>
+
+
+
+
+                                <div class="eventitem-pager">
+
+
+                                    <div class="eventitem-pager-older">
+                                        <div class="eventitem-pager-date">April 14</div>
+                                        <a class="eventitem-pager-link" href="/events/2016/4/14/week-of-the-young-child-final-night-time-tba"><span class="eventitem-pager-title">Week of the Young Child - Artsy Thursday</span></a>
+                                    </div>
+
+
+
+                                    <div class="eventitem-pager-newer">
+                                        <div class="eventitem-pager-date">April 22</div>
+                                        <a class="eventitem-pager-link" href="/events/2016/4/22/spring-ice-cream-social"><span class="eventitem-pager-title">Spring Ice Cream Social</span></a>
+                                    </div>
+
+
+                                    <div class="clear"></div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+                        <aside id="sidebarWrapper">
+                            <div id="sidebar">
+                                <div class="sqs-layout sqs-grid-1 columns-1" data-layout-label="Sidebar Content" data-type="block-field" data-updated-on="1432759883245" id="sidebarBlocks"><div class="row sqs-row"><div class="col sqs-col-1 span-1"><div class="sqs-block horizontalrule-block sqs-block-horizontalrule" data-block-type="47" id="block-0c47771f91077a33efb3"><div class="sqs-block-content"><hr /></div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-49921188d07196b578f4"><div class="sqs-block-content"><h2>Upcoming Events</h2></div></div><div class="sqs-block summary-block sqs-block-summary" data-block-type="20" id="block-8280cfef0be1927a8053"><div class="sqs-block-content"><div class="summary-item-list">
+                                                        <div class="summary-collection-title">Events</div>
+
+
+                                                        <div class="summary-item">
+
+                                                            <a href="/events/2016/4/19/culture-night"><div class="summary-thumbnail content-fill"><img data-src="http://static1.squarespace.com/static/555fdfcde4b006bb686d60df/55613212e4b0e7bb1a71c38c/56954bb9a12f44ec99fb9ac3/1461000399988/13047853_10154163590557704_529788516683805268_o.jpg" data-image="http://static1.squarespace.com/static/555fdfcde4b006bb686d60df/55613212e4b0e7bb1a71c38c/56954bb9a12f44ec99fb9ac3/1461000399988/13047853_10154163590557704_529788516683805268_o.jpg" data-image-dimensions="640x960" data-image-focal-point="0.5,0.5" alt="Culture Night"  /></div></a>
+
+                                                            <div class="summary-content summary-content-below-thumbnail">
+
+                                                                <div class="summary-title"><a href="/events/2016/4/19/culture-night">Culture Night</a></div>
+
+
+                                                                <time class="timestamp" datetime="2016-04-19">April 19</time>
+
+
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="summary-item">
+
+                                                            <a href="/events/2016/4/22/spring-ice-cream-social"><div class="summary-thumbnail content-fill"><img data-src="http://static1.squarespace.com/static/555fdfcde4b006bb686d60df/55613212e4b0e7bb1a71c38c/56ddc9a220c64765e5cabd39/1460999717343/ice+cream+social-fb-03.jpg" data-image="http://static1.squarespace.com/static/555fdfcde4b006bb686d60df/55613212e4b0e7bb1a71c38c/56ddc9a220c64765e5cabd39/1460999717343/ice+cream+social-fb-03.jpg" data-image-dimensions="1500x1500" data-image-focal-point="0.5,0.5" alt="Spring Ice Cream Social"  /></div></a>
+
+                                                            <div class="summary-content summary-content-below-thumbnail">
+
+                                                                <div class="summary-title"><a href="/events/2016/4/22/spring-ice-cream-social">Spring Ice Cream Social</a></div>
+
+
+                                                                <time class="timestamp" datetime="2016-04-22">April 22</time>
+
+
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="summary-item">
+
+                                                            <a href="/events/2016/4/29/cd-gala"><div class="summary-thumbnail content-fill"><img data-src="http://static1.squarespace.com/static/555fdfcde4b006bb686d60df/55613212e4b0e7bb1a71c38c/56954bdab204d541777fb5cb/1457375696800/" data-image="http://static1.squarespace.com/static/555fdfcde4b006bb686d60df/55613212e4b0e7bb1a71c38c/56954bdab204d541777fb5cb/1457375696800/" data-image-dimensions="3000x2003" data-image-focal-point="0.5,0.5" alt="Community Development Gala"  /></div></a>
+
+                                                            <div class="summary-content summary-content-below-thumbnail">
+
+                                                                <div class="summary-title"><a href="/events/2016/4/29/cd-gala">Community Development Gala</a></div>
+
+
+                                                                <time class="timestamp" datetime="2016-04-29">April 29</time>
+
+
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="summary-item">
+
+                                                            <div class="summary-content">
+
+                                                                <div class="summary-title"><a href="/events/2016/5/1/snack-study-the-frc">Snack & Study @ the FRC</a></div>
+
+
+                                                                <time class="timestamp" datetime="2016-05-01">May  1</time>
+
+
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="summary-item">
+
+                                                            <a href="/events/2016/5/3/birthday-cake"><div class="summary-thumbnail content-fill"><img data-src="http://static1.squarespace.com/static/555fdfcde4b006bb686d60df/55613212e4b0e7bb1a71c38c/56954bf5a12f44ec99fb9dc5/1453311627018/" data-image="http://static1.squarespace.com/static/555fdfcde4b006bb686d60df/55613212e4b0e7bb1a71c38c/56954bf5a12f44ec99fb9dc5/1453311627018/" data-image-dimensions="1500x1125" data-image-focal-point="0.5,0.5" alt="Birthday Cake"  /></div></a>
+
+                                                            <div class="summary-content summary-content-below-thumbnail">
+
+                                                                <div class="summary-title"><a href="/events/2016/5/3/birthday-cake">Birthday Cake</a></div>
+
+
+                                                                <time class="timestamp" datetime="2016-05-03">May  3</time>
+
+
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="summary-item">
+
+                                                            <div class="summary-content">
+
+                                                                <div class="summary-title"><a href="/events/2016/5/6/last-day-of-adult-childrens-programs">Last Day of Adult & Children's Programs</a></div>
+
+
+                                                                <time class="timestamp" datetime="2016-05-06">May  6</time>
+
+
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div></div><div class="sqs-block horizontalrule-block sqs-block-horizontalrule" data-block-type="47" id="block-1ddee58c283a884f1a29"><div class="sqs-block-content"><hr /></div></div></div></div></div>
+                            </div>
+                        </aside>
+
+                    </section>
+                </div>
+
             </div>
         </div>
 
-        <div class="col-sm-6">
-            <div class="jumbotron">
-                <p>
-                    {{ 'help.browse_admin'|trans|raw }}
-                </p>
-                <p>
-                    <a class="btn btn-primary btn-lg" href="{{ path('admin_record_index') }}">
-                        <i class="fa fa-lock"></i> {{ 'action.browse_admin'|trans }}
-                    </a>
-                </p>
-            </div>
-        </div>
-    </div>
-{% endblock %}
+        <script type="text/javascript" src="https://static1.squarespace.com/static/ta/4f9adbe124ac5df956fdf900/823/scripts/combo/?site.js"></script>
+        <script type="text/javascript" data-sqs-type="imageloader-bootstraper">(function() {if (window.ImageLoader) { window.ImageLoader.bootstrap(); }})();</script>
+        <script>Squarespace.afterBodyLoad(Y);</script>
+    </body>
+</html>
+

@@ -1,0 +1,98 @@
+{#
+    By default, forms enable client-side validation. This means that you can't
+    test the server-side validation errors from the browser. To temporarily
+    disable this validation, add the 'novalidate' attribute:
+
+    {{ form_start(form, { attr: { novalidate: 'novalidate' } }) }}
+#}
+{% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
+
+{% if show_confirmation|default(false) %}
+    {% set attr = {'data-confirmation': 'true'} %}
+    {{ include('event/_delete_registration_confirmation.html.twig') }}
+{% endif %}
+
+{{ form_start(form, { attr: attr|default({}) }) }}
+    {#{{ form_widget(form) }}#}
+    {{ form_row(form.firstName) }}
+    {{ form_row(form.lastName) }}
+    {{ form_row(form.CWID)}}
+    {{ form_row(form.email) }}
+    {{ form_row(form.building) }}
+    {{ form_row(form.apt) }}
+    {{ form_row(form.phone) }}
+    {{form_label(form.participants)}}
+    
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Participants</h3>
+        </div>        
+        <ul class="list-group" style="font-size:15px" id="participants_list" data-prototype="{{ form_widget(form.participants.vars.prototype)|e }}">
+                {# iterate over each existing tag and render its only field: name #}
+                {% for participant in form.participants %}
+                    <li class="list-group-item">{{form_widget(participant)}}</li>
+                {% endfor %}
+        </ul>
+        <a href="#" id="add_a_participant" class="btn btn-link">Add a participant</a>
+    </div>
+    <input type="submit" value="{{ button_label|default('action.register'|trans) }}"
+           class="{{ button_css|default("btn btn-primary") }}" />
+        
+{{ form_end(form) }}
+<script type="text/javascript">
+    var $collectionHolder;
+    jQuery(document).ready(function() {
+        // Get the ul that holds the collection of tags
+        $collectionHolder = $('#participants_list');
+
+        // count the current form inputs we have (e.g. 2), use that as the new
+        // index when inserting a new item (e.g. 2)
+        $collectionHolder.data('index', $collectionHolder.find(':input').length);
+        // add a delete link to all of the existing tag form li elements
+        $collectionHolder.find('li').each(function() {
+            addParticipantFormDeleteLink($(this));
+        });
+
+        $('#add_a_participant').on('click',function(e) {
+            // prevent the link from creating a "#" on the URL
+            e.preventDefault();
+
+            // add a new tag form (see next code block)
+            addParticipantForm($collectionHolder);
+            
+        });
+    });
+    function addParticipantForm($collectionHolder) {
+        // Get the data-prototype explained earlier
+        var prototype = $collectionHolder.data('prototype');
+
+        // get the new index
+        var index = $collectionHolder.data('index');
+
+        // Replace '__name__' in the prototype's HTML to
+        // instead be a number based on how many items we have
+        var newForm = prototype.replace(/__name__/g, index);
+
+        // increase the index with one for the next item
+        $collectionHolder.data('index', index + 1);
+
+        // Display the form in the page in an li, before the "Add a tag" link li
+        var $newFormLi = $('<li class="list-group-item"></li>').append(newForm);
+        // add a delete link to the new form
+        addParticipantFormDeleteLink($newFormLi);
+        $newFormLi.appendTo($collectionHolder);
+    }
+    function addParticipantFormDeleteLink($participantFormLi) {
+        var $removeFormA = $('<a href="#" class="btn btn-link">Delete this participant</a>');
+        $participantFormLi.append($removeFormA);
+
+        $removeFormA.on('click', function(e) {
+            // prevent the link from creating a "#" on the URL
+            e.preventDefault();
+
+            // remove the li for the tag form
+            $participantFormLi.remove();
+        });
+    }
+    
+</script>

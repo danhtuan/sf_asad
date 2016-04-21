@@ -21,7 +21,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
  * @author Ryan Weaver <weaverryan@gmail.com>
  * @author Javier Eguiluz <javier.eguiluz@gmail.com>
  */
-class RecordSearchType extends AbstractType {
+class ParticipantType extends AbstractType {
 
     /**
      * {@inheritdoc}
@@ -37,45 +37,52 @@ class RecordSearchType extends AbstractType {
         //     $builder->add('title', null, array('required' => false, ...));
 
         $builder
-                ->add('clientID', 'text', array(
-                    'attr' => array(
-//                        'placeholder' => 'placeholder.first_name',
-//                        'data-help' => 'help.firstName',
-                        
-                    ),
-                    'required'=>false,
-                    'label' => 'label.client_id',
-                ))   
                 ->add('firstName', 'text', array(
                     'attr' => array(
-//                        'placeholder' => 'placeholder.first_name',
-//                        'data-help' => 'help.firstName',
                     ),
-                    'required'=>false,
                     'label' => 'label.first_name',
-                ))                
+                ))
                 ->add('lastName', 'text', array(
-                    'attr' => array(
-                    ),
-                    'required'=>false,
+                    'attr' => array(),
                     'label' => 'label.last_name'
                 ))
-                ->add('btn_search','submit', array(
-                    'label' => 'label.search',
-                    'attr'=>array(
-                        'class'=>'btn btn-primary',
+               ->add('isKid', 'choice', array(
+                   'label' => 'label.is_kid',
+                    'choices' => array(
+                      '1' => 'Yes',
+                      '0' => 'No'
                     ),
+                    'multiple' => false,
+                    'expanded' => true,
+                    'required' => true,
+                    'data'     => '0',
+                    'label_attr'  => array(
+                        'class' => 'radio-inline',
+                    ),        
+                ))
+                ->add('specialAssist', 'text', array(
+                    'attr' => array(),
+                    'label' => 'label.special_assist'
                 ))
         ;
     }
-    
+
+    /**
+     * {@inheritdoc}
+     */
+    public function configureOptions(OptionsResolver $resolver) {
+        $resolver->setDefaults(array(
+            'data_class' => 'AppBundle\Entity\Participant',
+        ));
+    }
+
     /**
      * {@inheritdoc}
      */
     public function getName() {
         // Best Practice: use 'app_' as the prefix of your custom form types names
         // see http://symfony.com/doc/current/best_practices/forms.html#custom-form-field-types
-        return 'app_record_search';
+        return 'app_participant';
     }
 
 }

@@ -7,7 +7,7 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Babyline Application{% endblock %}</title>
+        <title>{% block title %}FRC Event Registration{% endblock %}</title>
 
         {% block stylesheets %}
         {# uncomment the following lines to compile SCSS assets with Assetic
@@ -24,6 +24,31 @@
 
             <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         {% endblock %}
+        {% block javascripts %}
+        {# uncomment the following lines to combine and minimize JavaScript assets with Assetic
+            {% javascripts filter="?jsqueeze" output="js/app.js"
+                "%kernel.root_dir%/Resources/assets/js/jquery-2.1.4.js"
+                "%kernel.root_dir%/Resources/assets/js/bootstrap-3.3.4.js"
+                "%kernel.root_dir%/Resources/assets/js/highlight.pack.js"
+                "%kernel.root_dir%/Resources/assets/js/main.js" %}
+                <script src="{{ asset_url }}"></script>
+            {% endjavascripts %}
+        #}
+            {% javascripts filter="?jsqueeze" output="js/app.js"
+                "%kernel.root_dir%/Resources/assets/js/jquery-2.1.4.js"
+                "%kernel.root_dir%/Resources/assets/js/bootstrap-3.3.4.js"
+                "%kernel.root_dir%/Resources/assets/js/highlight.pack.js"
+                "%kernel.root_dir%/Resources/assets/js/main.js" %}
+                <script src="{{ asset_url }}"></script>
+            {% endjavascripts %}
+            {#<script src="{{ asset('js/app.js') }}"></script>#}
+
+            <script>
+                $(document).ready(function() {
+                    hljs.initHighlightingOnLoad();
+                });
+            </script>
+        {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
 
@@ -34,8 +59,8 @@
                 <div class="navbar navbar-default navbar-static-top" role="navigation">
                     <div class="container">
                         <div class="navbar-header">
-                            <a class="navbar-brand" href="{{ path('admin_record_index') }}">
-                                Babyline
+                            <a class="navbar-brand" href="{{ path('homepage') }}">
+                                FRC Event Registration
                             </a>
 
                             <button type="button" class="navbar-toggle"
@@ -90,10 +115,7 @@
                                 <div class="well well-lg">
                                     <p>
                                         {{ 'help.app_description'|trans|raw }}
-                                    </p>
-                                    <p>
-                                        {{ 'help.more_information'|trans|raw }}
-                                    </p>
+                                    </p>                                    
                                 </div>
                             </div>
                         {% endblock %}
@@ -109,32 +131,14 @@
                 <div class="container">
                     <div class="row">
                         <div id="footer-copyright" class="col-md-6">
-                            <p>&copy; {{ 'now'|date('Y') }} - Tuan Nguyen - Oklahoma State University</p>                            
+                            <p>&copy; {{ 'now'|date('Y') }} - Team 2: {Huyen Nguyen, Quyen Nguyen, Daniel} - Oklahoma State University</p>                            
                         </div>                        
                     </div>
                 </div>
             </footer>
         {% endblock %}
 
-        {% block javascripts %}
-        {# uncomment the following lines to combine and minimize JavaScript assets with Assetic
-            {% javascripts filter="?jsqueeze" output="js/app.js"
-                "%kernel.root_dir%/Resources/assets/js/jquery-2.1.4.js"
-                "%kernel.root_dir%/Resources/assets/js/bootstrap-3.3.4.js"
-                "%kernel.root_dir%/Resources/assets/js/highlight.pack.js"
-                "%kernel.root_dir%/Resources/assets/js/main.js" %}
-                <script src="{{ asset_url }}"></script>
-            {% endjavascripts %}
-        #}
-
-            <script src="{{ asset('js/app.js') }}"></script>
-
-            <script>
-                $(document).ready(function() {
-                    hljs.initHighlightingOnLoad();
-                });
-            </script>
-        {% endblock %}
+        
 
     </body>
 </html>

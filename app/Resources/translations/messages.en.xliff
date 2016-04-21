@@ -257,7 +257,8 @@
 
             <trans-unit id="help.app_description">
                 <source>help.app_description</source>
-                <target><![CDATA[Babyline Project-Version 1.0-Fall 2015]]></target>
+                <target><![CDATA[This is the <strong> Event Registration System </strong> for Family Resource Center-
+                            as our final project for ASAD class at OSU Spring 2016]]></target>
             </trans-unit>
             <trans-unit id="help.show_code">
                 <source>help.show_code</source>
@@ -295,52 +296,7 @@
                 <source>help.more_information</source>
                 <target><![CDATA[Please feedback ideas, comments or bugs to Tuan Nguyen (tuan.d.nguyen@okstate.du, 405-762-3303.]]></target>
             </trans-unit>
-            
-            <trans-unit id="placeholder.first_name">
-                <source>placeholder.first_name</source>
-                <target>Customer First Name</target>
-            </trans-unit>
-            <trans-unit id="cat.single">
-                <source>cat.single</source>
-                <target>Single</target>
-            </trans-unit>
-            <trans-unit id="cat.married">
-                <source>cat.married</source>
-                <target>Married</target>
-            </trans-unit>
-            <trans-unit id="cat.liv_married">
-                <source>cat.liv_married</source>
-                <target>Living as married</target>
-            </trans-unit>
-            <trans-unit id="cat.divorced">
-                <source>cat.divorced</source>
-                <target>Divorced or separated</target>
-            </trans-unit>
-            <trans-unit id="cat.widowed">
-                <source>cat.widowed</source>
-                <target>Widowed</target>
-            </trans-unit>
-            
-            <trans-unit id="cat.high_school">
-                <source>cat.high_school</source>
-                <target>Some high school</target>
-            </trans-unit>
-            <trans-unit id="cat.high_school_graduate">
-                <source>cat.high_school_graduate</source>
-                <target>High school graduate</target>
-            </trans-unit>
-            <trans-unit id="cat.tech_school">
-                <source>cat.tech_school</source>
-                <target>Technical/trade school</target>
-            </trans-unit>
-            <trans-unit id="cat.college">
-                <source>cat.college</source>
-                <target>Some college</target>
-            </trans-unit>
-            <trans-unit id="cat.college_graduate">
-                <source>cat.college_graduate</source>
-                <target>College graduate</target>
-            </trans-unit>
+                                    
             
             <trans-unit id="sidebar.basic_info">
                 <source>sidebar.basic_info</source>
@@ -371,26 +327,7 @@
                 </target>
             </trans-unit>
             
-            <trans-unit id="title.record_new">
-                <source>title.record_new</source>
-                <target>New Record</target>
-            </trans-unit> 
-            <trans-unit id="label.help_operator">
-                <source>label.help_operator</source>
-                <target>Operator</target>
-            </trans-unit>
-            <trans-unit id="label.high_priority">
-                <source>label.high_priority</source>
-                <target>High Priority</target>
-            </trans-unit>
-            <trans-unit id="label.client_id">
-                <source>label.client_id</source>
-                <target>ClientID</target>
-            </trans-unit>
-            <trans-unit id="label.date_of_call">
-                <source>label.date_of_call</source>
-                <target>Call Date</target>
-            </trans-unit>
+
             <trans-unit id="label.status">
                 <source>label.status</source>
                 <target>Status</target>
@@ -420,358 +357,106 @@
                 <source>label.age</source>
                 <target>Age</target>
             </trans-unit> 
-            <trans-unit id="label.race">
-                <source>label.race</source>
-                <target>Race</target>
-            </trans-unit> 
-            <trans-unit id="label.ethnicity">
-                <source>label.ethnicity</source>
-                <target>Ethnicity</target>
-            </trans-unit> 
-            <trans-unit id="label.street_address">
-                <source>label.street_address</source>
-                <target>Street Address</target>
-            </trans-unit> 
-            <trans-unit id="label.city">
-                <source>label.city</source>
-                <target>City</target>
-            </trans-unit> 
-            <trans-unit id="label.zipcode">
-                <source>label.zipcode</source>
-                <target>Zipcode </target>
-            </trans-unit> 
-            <trans-unit id="label.phone_number">
-                <source>label.phone_number</source>
-                <target>Phone Number</target>
-            </trans-unit> 
-            
-            <trans-unit id="label.message_ok">
-                <source>label.message_ok</source>
-                <target>Message Ok?</target>
-            </trans-unit> 
-
-            <trans-unit id="label.other_phone_number">
-                <source>label.other_phone_number</source>
-                <target>Phone Number (if applicable)</target>
-            </trans-unit> 
-            <trans-unit id="label.marital_status">
-                <source>label.marital_status</source>
-                <target>Marital Status</target>
-            </trans-unit> 
-            <trans-unit id="label.education">
-                <source>label.education</source>
-                <target>Education</target>
-            </trans-unit> 
-            <trans-unit id="label.current_school">
-                <source>label.current_school</source>
-                <target>Current school</target>
+            <trans-unit id="title.event_register">
+                <source>title.event_register</source>
+                <target>Event Registration</target>
             </trans-unit>  
-            <trans-unit id="label.is_employed">
-                <source>label.is_employed</source>
-                <target>Employment</target>
+            <trans-unit id="label.building">
+                <source>label.building</source>
+                <target>Building</target>
             </trans-unit>  
-            <trans-unit id="label.num_household">
-                <source>label.num_household</source>
-                <target># in Household</target>
+            <trans-unit id="label.email">
+                <source>label.email</source>
+                <target>Email</target>
+            </trans-unit>  
+            <trans-unit id="label.apt">
+                <source>label.apt</source>
+                <target>Apt</target>
+            </trans-unit>  
+            <trans-unit id="help.remain_slots">
+                <source>help.remain_slots</source>
+                <target>Remain Slots</target>
             </trans-unit> 
-            <trans-unit id="label.income">
-                <source>label.income</source>
-                <target>Income</target>
-            </trans-unit>    
-            <trans-unit id="label.next">
-                <source>label.next</source>
-                <target>Next</target>
-            </trans-unit> 
-            <trans-unit id="label.back">
-                <source>label.back</source>
-                <target>Back</target>
+            <trans-unit id="label.none">
+                <source>label.none</source>
+                <target></target>
+            </trans-unit>  
+            <trans-unit id="label.CWID">
+                <source>label.CWID</source>
+                <target>CWID</target>
             </trans-unit>   
-            
-            <trans-unit id="label.insurance">
-                <source>label.insurance</source>
-                <target>Insurance</target>
-            </trans-unit>    
-            <trans-unit id="label.testLocation">
-                <source>label.testLocation</source>
-                <target>Pregnancy Test Location</target>
-            </trans-unit>
-            <trans-unit id="label.pregAttempted">
-                <source>label.pregAttempted</source>
-                <target>Pregnancy attempted?</target>
-            </trans-unit>
-            <trans-unit id="label.isBirthCtrl">
-                <source>label.isBirthCtrl</source>
-                <target>Birth Control</target>
+            <trans-unit id="label.is_kid">
+                <source>label.is_kid</source>
+                <target>Is Kid?</target>
             </trans-unit> 
-            <trans-unit id="label.birthControl">
-                <source>label.birthControl</source>
-                <target>Birth Control</target>
-            </trans-unit>
-            <trans-unit id="label.lmp">
-                <source>label.lmp</source>
-                <target>LMP</target>
-            </trans-unit>
-            <trans-unit id="label.est_due_date">
-                <source>label.est_due_date</source>
-                <target>Estimated due date</target>
-            </trans-unit>
-            <trans-unit id="label.gestation">
-                <source>label.gestation</source>
-                <target>Approximate gestation (weeks)</target>
-            </trans-unit>
-            <trans-unit id="label.numPastPreg">
-                <source>label.numPastPreg</source>
-                <target>Past pregnancies</target>
-            </trans-unit>
-            <trans-unit id="label.numLiveBirth">
-                <source>label.numLiveBirth</source>
-                <target>Live births</target>
-            </trans-unit>
-            <trans-unit id="label.numStillBirth">
-                <source>label.numStillBirth</source>
-                <target>Stillbirths</target>
-            </trans-unit>
-            <trans-unit id="label.numMiscarriages">
-                <source>label.numMiscarriages</source>
-                <target>Miscarriages</target>
-            </trans-unit>
-            <trans-unit id="label.numAbortions">
-                <source>label.numAbortions</source>
-                <target>Abortions</target>
-            </trans-unit>
-            <trans-unit id="label.numTubalPreg">
-                <source>label.numTubalPreg</source>
-                <target>Tubal Pregnancies</target>
-            </trans-unit>
-            <trans-unit id="label.isCSection">
-                <source>label.isCSection</source>
-                <target>C-sections</target>
-            </trans-unit>
-            <trans-unit id="label.dateOfLastBirth">
-                <source>label.dateOfLastBirth</source>
-                <target>Date of last birth</target>
-            </trans-unit>
-            <trans-unit id="label.isPainFever">
-                <source>label.isPainFever</source>
-                <target>***Pain or Fever</target>
-            </trans-unit>
-            <trans-unit id="label.isAbnormalBleeding">
-                <source>label.isAbnormalBleeding</source>
-                <target>***Abnormal Bleeding</target>
-            </trans-unit>
-            <trans-unit id="label.isUnusualDischarge">
-                <source>label.isUnusualDischarge</source>
-                <target>***Unusual Discharge</target>
-            </trans-unit> 
-            <trans-unit id="label.isHeadache">
-                <source>label.isHeadache</source>
-                <target>***Headache</target>
-            </trans-unit> 
-            <trans-unit id="label.isSevereVomiting">
-                <source>label.isSevereVomiting</source>
-                <target>***Severe vomiting</target>
-            </trans-unit> 
-            <trans-unit id="label.isUTI">
-                <source>label.isUTI</source>
-                <target>***UTI</target>
-            </trans-unit> 
-            <trans-unit id="label.isSwelling">
-                <source>label.isSwelling</source>
-                <target>***Swelling</target>
-            </trans-unit> 
-            <trans-unit id="label.isCramping">
-                <source>label.isCramping</source>
-                <target>***Cramping</target>
-            </trans-unit> 
-            <trans-unit id="label.isSafetyI">
-                <source>label.isSafetyI</source>
-                <target>Safety I</target>
-            </trans-unit>
-            <trans-unit id="label.isSafetyII">
-                <source>label.isSafetyII</source>
-                <target>Safety II</target>
-            </trans-unit>
-            <trans-unit id="label.isSafetyIII">
-                <source>label.isSafetyIII</source>
-                <target>Safety III</target>
-            </trans-unit>
-            <trans-unit id="label.isDiabetes">
-                <source>label.isDiabetes</source>
-                <target>***Diabetes</target>
-            </trans-unit>
-            <trans-unit id="label.isHeartLungDisease">
-                <source>label.isHeartLungDisease</source>
-                <target>***Heart/Lung Disease</target>
-            </trans-unit>
-            <trans-unit id="label.isSeizures">
-                <source>label.isSeizures</source>
-                <target>***Seizures</target>
-            </trans-unit>
-            <trans-unit id="label.isThyroidProblems">
-                <source>label.isThyroidProblems</source>
-                <target>***Thyroid Problems</target>
-            </trans-unit>
-            <trans-unit id="label.isHighBloodPressure">
-                <source>label.isHighBloodPressure</source>
-                <target>***High Blood Pressure</target>
-            </trans-unit>
-            <trans-unit id="label.isPrescriptionMeds">
-                <source>label.isPrescriptionMeds</source>
-                <target>***Prescription Meds</target>
-            </trans-unit>
-            <trans-unit id="label.medications">
-                <source>label.medications</source>
-                <target>Medications</target>
+            <trans-unit id="label.special_assist">
+                <source>label.special_assist</source>
+                <target>Special Assistant?</target>
+            </trans-unit>  
+            <trans-unit id="action.submit">
+                <source>action.submit</source>
+                <target>Submit</target>
             </trans-unit>
             
-            <trans-unit id="label.isAppointment">
-                <source>label.isAppointment</source>
-                <target>Appointment?</target>
-            </trans-unit>
-            <trans-unit id="label.clinic">
-                <source>label.clinic</source>
-                <target>Appointment Clinic</target>
-            </trans-unit>
-            <trans-unit id="label.appointmentDate">
-                <source>label.appointmentDate</source>
-                <target>Appointment Date</target>
-            </trans-unit>
-            <trans-unit id="label.appointmentTime">
-                <source>label.appointmentTime</source>
-                <target>Appointment Time</target>
-            </trans-unit>            
-            
-            <trans-unit id="label.isWIC">
-                <source>label.isWIC</source>
-                <target>WIC</target>
-            </trans-unit>
-            
-            <trans-unit id="label.isChildrenFirst">
-                <source>label.isChildrenFirst</source>
-                <target>Children First</target>
-            </trans-unit>
-            <trans-unit id="label.isHealthyStart">
-                <source>label.isHealthyStart</source>
-                <target>Healthy Start</target>
-            </trans-unit>
-            <trans-unit id="label.finalComment">
-                <source>label.finalComment</source>
-                <target>Final Comment</target>
-            </trans-unit>
-            <trans-unit id="label.submit_list">
-                <source>label.submit_list</source>
-                <target>Submit and Homepage</target>
-            </trans-unit>
-            <trans-unit id="label.submit_new">
-                <source>label.submit_new</source>
-                <target>Submit and New</target>
-            </trans-unit>
-            <trans-unit id="label.search">
-                <source>label.search</source>
-                <target>Search</target>
-            </trans-unit>
-            <!-- Categories Option Keys -->
-            <trans-unit id="cat.select_a_value">
-                <source>cat.select_a_value</source>
-                <target>Please select</target>
-            </trans-unit>  
-            <trans-unit id="cat.yes">
-                <source>cat.yes</source>
-                <target>Yes</target>
+                
+            <trans-unit id="placeholder.first_name">
+                <source>placeholder.first_name</source>
+                <target>e.g. Huyen</target>
             </trans-unit> 
-            <trans-unit id="cat.no">
-                <source>cat.no</source>
-                <target>No</target>
-            </trans-unit> 
-            <trans-unit id="cat.less_2k">
-                <source>cat.less_2k</source>
-                <target>Less than $20,000</target>
-            </trans-unit>
-            <trans-unit id="cat.f2k_t5k">
-                <source>cat.f2k_t5k</source>
-                <target>$20,000-$50,000</target>
+            <trans-unit id="placeholder.last_name">
+                <source>placeholder.last_name</source>
+                <target>e.g. Nguyen</target>
+            </trans-unit>                             
+            <trans-unit id="placeholder.CWID">
+                <source>placeholder.CWID</source>
+                <target>e.g. 12314578</target>
+            </trans-unit>                             
+            <trans-unit id="placeholder.email">
+                <source>placeholder.email</source>
+                <target>e.g. youremail@okstate.edu</target>
+            </trans-unit>                             
+            <trans-unit id="placeholder.building">
+                <source>placeholder.building</source>
+                <target>e.g. 75 S University Pl</target>
+            </trans-unit>                             
+            <trans-unit id="placeholder.apt">
+                <source>placeholder.apt</source>
+                <target>e.g. Apt 1</target>
             </trans-unit>   
-            <trans-unit id="cat.more_5k">
-                <source>cat.more_5k</source>
-                <target>More than $50,000</target>
-            </trans-unit>
-            <trans-unit id="cat.white">
-                <source>cat.white</source>
-                <target>White/Caucasian</target>
-            </trans-unit>  
-            <trans-unit id="cat.black">
-                <source>cat.black</source>
-                <target>Black/African-American</target>
-            </trans-unit>  
-            <trans-unit id="cat.asian">
-                <source>cat.asian</source>
-                <target>Asian</target>
-            </trans-unit>  
-            <trans-unit id="cat.native">
-                <source>cat.native</source>
-                <target>Native American</target>
-            </trans-unit>   
-            <trans-unit id="cat.mixed">
-                <source>cat.mixed</source>
-                <target>Mixed race</target>
-            </trans-unit>    
-            <trans-unit id="cat.other">
-                <source>cat.other</source>
-                <target>Other</target>
-            </trans-unit>       
-            <trans-unit id="cat.none">
-                <source>cat.none</source>
-                <target>None</target>
-            </trans-unit>   
-            <trans-unit id="cat.govrn_subsidized">
-                <source>cat.govrn_subsidized</source>
-                <target>Government subsidized (Eg. SoonerCare)</target>
-            </trans-unit>   
-            <trans-unit id="cat.private_insurance">
-                <source>cat.private_insurance</source>
-                <target>Private insurance (personal pay or through employer)</target>
-            </trans-unit>   
-            <trans-unit id="cat.home_test">
-                <source>cat.home_test</source>
-                <target>Home pregnancy test</target>
-            </trans-unit>   
-            <trans-unit id="cat.healthcare_test">
-                <source>cat.healthcare_test</source>
-                <target>Pregnancy test at a healthcare clinic</target>
+            <trans-unit id="placeholder.phone">
+                <source>placeholder.phone</source>
+                <target>e.g. 4057629999</target>
             </trans-unit>   
             
-            <trans-unit id="cat.condoms">
-                <source>cat.condoms</source>
-                <target>Condoms</target>
-            </trans-unit>
-            <trans-unit id="cat.pills">
-                <source>cat.pills</source>
-                <target>Birth control pills (Oral contraceptives)</target>
-            </trans-unit>
-            <trans-unit id="cat.nuva_ring">
-                <source>cat.nuva_ring</source>
-                <target>Nuva Ring</target>
-            </trans-unit>
-            <trans-unit id="cat.depo_provera">
-                <source>cat.depo_provera</source>
-                <target>Depo-Provera (Injectable contraceptive)</target>
-            </trans-unit>
-            <trans-unit id="cat.iud">
-                <source>cat.iud</source>
-                <target>IUD (Copper or Mirena/Skyla)</target>
-            </trans-unit>
-            <trans-unit id="cat.implant">
-                <source>cat.implant</source>
-                <target>Implant (Implanon)</target>
-            </trans-unit>   
-            <trans-unit id="cat.completed">
-                <source>cat.completed</source>
-                <target>Completed</target>
-            </trans-unit>
-            <trans-unit id="cat.uncompleted">
-                <source>cat.uncompleted</source>
-                <target>Draft</target>
-            </trans-unit>                                          
+            <trans-unit id="label.event">
+                <source>label.event</source>
+                <target>Event</target>
+            </trans-unit>                        
+            <trans-unit id="label.location">
+                <source>label.location</source>
+                <target>Location</target>
+            </trans-unit>                        
+            <trans-unit id="label.date">
+                <source>label.date</source>
+                <target>Date</target>
+            </trans-unit>                        
+            <trans-unit id="label.time">
+                <source>label.time</source>
+                <target>Time</target>
+            </trans-unit>                        
+            <trans-unit id="label.maxOccupancy">
+                <source>label.maxOccupancy</source>
+                <target>Max. Occupancy</target>
+            </trans-unit>                        
+            <trans-unit id="label.freeOccupancy">
+                <source>label.freeOccupancy</source>
+                <target>Remain Slots</target>
+            </trans-unit>                        
+            <trans-unit id="title.event_info">
+                <source>title.event_info</source>
+                <target>Event Information</target>
+            </trans-unit>                        
+                    
         </body>
     </file>
 </xliff>

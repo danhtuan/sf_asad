@@ -8,7 +8,7 @@
 
 {% if show_confirmation|default(false) %}
     {% set attr = {'data-confirmation': 'true'} %}
-    {{ include('admin/record/_delete_record_confirmation.html.twig') }}
+   {{ include('event/_delete_registration_confirmation.html.twig') }}
 {% endif %}
 
 {{ form_start(form, { attr: attr|default({}) }) }}
