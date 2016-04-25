@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block body_id 'register_new' %}
+
+    {% block main %}
+        <h1>{{ 'title.event_register'|trans }}</h1>
+        {{ include('default/_flash_messages.html.twig') }}
+        {{ include('event/_search_form.html.twig', {
+        include_back_to_home_link: true,
+    }) }}
+
+    {% endblock %}
+    {% block sidebar %}
+        <div class="section about">
+            <div class="well well-lg">
+                <span>
+                    {{ 'help.search_guidline'|trans|raw }} 
+                </span>                
+            </div>
+        </div>
+    {% endblock %}
+

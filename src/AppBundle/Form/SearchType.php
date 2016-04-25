@@ -20,7 +20,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
  * @author Ryan Weaver <weaverryan@gmail.com>
  * @author Javier Eguiluz <javier.eguiluz@gmail.com>
  */
-class RegisterType extends AbstractType {
+class SearchType extends AbstractType {
 
     /**
      * {@inheritdoc}
@@ -47,46 +47,13 @@ class RegisterType extends AbstractType {
                         'placeholder' => 'placeholder.last_name',
                     ),
                     'label' => 'label.last_name'
-                ))
-                ->add('CWID', 'text', array(
-                    'attr' => array(
-                        'placeholder' => 'placeholder.CWID',
-                    ),
-                    'label' => 'label.CWID',
-                    'required'=>false,
-                ))
+                ))                
                 ->add('email', 'email', array(
                     'attr' => array(
                         'placeholder' => 'placeholder.email',
                     ),
                     'label' => 'label.email'
-                ))
-                ->add('building', 'text', array(
-                    'attr' => array(
-                        'placeholder' => 'placeholder.building',
-                    ),
-                    'label' => 'label.building'
-                ))
-                ->add('apt', 'text', array(
-                    'attr' => array(
-                        'placeholder' => 'placeholder.apt',
-                    ),
-                    'label' => 'label.apt'
-                ))
-                ->add('phone', 'text', array(
-                    'attr' => array(
-                        'placeholder' => 'placeholder.phone',
-                    ),
-                    'label' => 'label.phone_number'
-                ))
-                ->add('participants', 'collection', array(
-                    'label'=>'label.none',
-                    'type' => new ParticipantType(),
-                    'allow_add'    => true,
-                    'by_reference' => false,
-                    'allow_delete' => true,
-                    'prototype'    => true,                    
-                ))
+                ))                            
         ; 
     }
 
@@ -105,7 +72,7 @@ class RegisterType extends AbstractType {
     public function getName() {
         // Best Practice: use 'app_' as the prefix of your custom form types names
         // see http://symfony.com/doc/current/best_practices/forms.html#custom-form-field-types
-        return 'app_resident';
+        return 'app_search';
     }
 
 }

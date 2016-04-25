@@ -12,6 +12,7 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Form\RegisterType;
+use AppBundle\Form\SearchType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -32,7 +33,7 @@ class EventController extends Controller {
     /**
      * Creates a new Post entity.
      *
-     * @Route("/{event_id}", name="register_new", defaults={"event_id" = 3})
+     * @Route("/new/{event_id}", name="register_new", defaults={"event_id" = 3})
      * @Method({"GET", "POST"})
      *
      * NOTE: the Method annotation is optional, but it's a recommended practice
@@ -40,12 +41,12 @@ class EventController extends Controller {
      * it responds to all methods).
      */
     public function newAction(Request $request, $event_id) {
-        $event = NULL;        
+        $event = NULL;
         if ($event_id != NULL) {
             $event = $this->getDoctrine()
                     ->getRepository('AppBundle:Event')
                     ->find($event_id);
-        }        
+        }
         $resident = new \AppBundle\Entity\Resident();
         $resident->setEventId($event_id);
         $form = $this->createForm(new RegisterType(), $resident);
@@ -55,21 +56,21 @@ class EventController extends Controller {
         // isValid() method already checks whether the form is submitted.
         // However, we explicitly add it to improve code readability.
         // See http://symfony.com/doc/current/best_practices/forms.html#handling-form-submits
-        if ($form->isSubmitted() && $form->isValid()) {                        
+        if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($resident);
             $numParticipant = 0;
-            foreach($resident->getParticipants() as $participant){
+            foreach ($resident->getParticipants() as $participant) {
                 $participant->setResident($resident);
                 $numParticipant++;
             }
-            
+
             //reduce the number of available slots
             $currentOccupancy = $event->getFreeOccupancy();
             $event->setFreeOccupancy($currentOccupancy - $numParticipant);
             $em->persist($event);
             $em->flush();
-            
+
             // Flash messages are used to notify the user about the result of the
             // actions. They are deleted automatically from the session as soon
             // as they are accessed.
@@ -84,10 +85,9 @@ class EventController extends Controller {
         return $this->render('event/new.html.twig', array(
                     'register' => $resident,
                     'form' => $form->createView(),
-                    'event'=>$event,                    
+                    'event' => $event,
         ));
     }
-    
 
     /**
      * Finds and displays a Post entity.
@@ -99,10 +99,10 @@ class EventController extends Controller {
         // This security check can also be performed:
         //   1. Using an annotation: @Security("post.isAuthor(user)")
         //   2. Using a "voter" (see http://symfony.com/doc/current/cookbook/security/voters_data_permission.html)
-        
+
         $resident = $this->getDoctrine()
-                    ->getRepository('AppBundle:Resident')
-                    ->find($resident_id);
+                ->getRepository('AppBundle:Resident')
+                ->find($resident_id);
         $deleteForm = $this->createDeleteForm($resident);
 
         return $this->render('event/show.html.twig', array(
@@ -110,6 +110,7 @@ class EventController extends Controller {
                     'delete_form' => $deleteForm->createView(),
         ));
     }
+
     /**
      * Creates a form to delete a Post entity by id.
      *
@@ -130,7 +131,7 @@ class EventController extends Controller {
                         ->getForm()
         ;
     }
-    
+
     /**
      * Deletes a Post entity.
      *
@@ -143,15 +144,27 @@ class EventController extends Controller {
      */
     public function deleteAction(Request $request, $id) {
         $resident = $this->getDoctrine()
-                    ->getRepository('AppBundle:Resident')
-                    ->find($id);
-        
+                ->getRepository('AppBundle:Resident')
+                ->find($id);
+        $event_id = $resident->getEventId();
+        $event = $this->getDoctrine()
+                ->getRepository('AppBundle:Event')
+                ->find($event_id);
+        $numParticipants = 0;
+        foreach ($resident->getParticipants() as $participant) {
+            $numParticipants++;
+        }
+
         $form = $this->createDeleteForm($resident);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager = $this->getDoctrine()->getManager();
-
+            //reduce the number of available slots
+            $currentOccupancy = $event->getFreeOccupancy();
+            $event->setFreeOccupancy($currentOccupancy - $numParticipants);
+            $entityManager->persist($event);
+            
             $entityManager->remove($resident);
             $entityManager->flush();
 
@@ -160,7 +173,7 @@ class EventController extends Controller {
 
         return $this->redirectToRoute('homepage');
     }
-    
+
     /**
      * Creates a new Post entity.
      *
@@ -173,14 +186,14 @@ class EventController extends Controller {
      */
     public function editAction(Request $request, $id) {
         $resident = $this->getDoctrine()
-                    ->getRepository('AppBundle:Resident')
-                    ->find($id);
+                ->getRepository('AppBundle:Resident')
+                ->find($id);
         $event_id = $resident->getEventId();
         $event = $this->getDoctrine()
-                    ->getRepository('AppBundle:Event')
-                    ->find($event_id);
+                ->getRepository('AppBundle:Event')
+                ->find($event_id);
         $oldNumParticipant = 0;
-        foreach($resident->getParticipants() as $participant){
+        foreach ($resident->getParticipants() as $participant) {
             $oldNumParticipant++;
         }
         $form = $this->createForm(new RegisterType(), $resident);
@@ -190,22 +203,22 @@ class EventController extends Controller {
         // isValid() method already checks whether the form is submitted.
         // However, we explicitly add it to improve code readability.
         // See http://symfony.com/doc/current/best_practices/forms.html#handling-form-submits
-        if ($form->isSubmitted() && $form->isValid()) {                        
+        if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($resident);
             $numParticipant = 0;
-            foreach($resident->getParticipants() as $participant){
+            foreach ($resident->getParticipants() as $participant) {
                 $numParticipant++;
                 $participant->setResident($resident);
             }
-            
+
             //reduce the number of available slots
             $currentOccupancy = $event->getFreeOccupancy();
             $event->setFreeOccupancy($currentOccupancy + $oldNumParticipant - $numParticipant);
             $em->persist($event);
-            
+
             $em->flush();
-            
+
             // Flash messages are used to notify the user about the result of the
             // actions. They are deleted automatically from the session as soon
             // as they are accessed.
@@ -220,7 +233,67 @@ class EventController extends Controller {
         return $this->render('event/new.html.twig', array(
                     'register' => $resident,
                     'form' => $form->createView(),
-                    'event'=>$event,                    
+                    'event' => $event,
         ));
     }
+    /**
+     * Search registration.
+     *
+     * @Route("/search/{event_id}", name="search_registration", defaults={"event_id" = 3})
+     * @Method({"GET", "POST"})
+     *
+     * NOTE: the Method annotation is optional, but it's a recommended practice
+     * to constraint the HTTP methods each controller responds to (by default
+     * it responds to all methods).
+     */
+    public function searchAction(Request $request, $event_id) {
+        $event = NULL;
+        if ($event_id != NULL) {
+            $event = $this->getDoctrine()
+                    ->getRepository('AppBundle:Event')
+                    ->find($event_id);
+        }
+        $resident = new \AppBundle\Entity\Resident();
+        $form = $this->createForm(new SearchType(), $resident);
+        $form->handleRequest($request);
+
+        // the isSubmitted() method is completely optional because the other
+        // isValid() method already checks whether the form is submitted.
+        // However, we explicitly add it to improve code readability.
+        // See http://symfony.com/doc/current/best_practices/forms.html#handling-form-submits
+        if ($form->isSubmitted() && $form->isValid()) {
+            $firstName = $resident->getFirstName();
+            $lastName = $resident->getLastName();
+            $email = $resident->getEmail();
+            
+            $repo = $this->getDoctrine()
+                         ->getRepository('AppBundle:Resident');
+            $match_resident = $repo->getOneResidentBySearch($firstName, 
+                                                    $lastName, 
+                                                    $email); 
+            if($match_resident != NULL){
+                return $this->redirectToRoute('register_show_detail', array(
+                        'resident_id' => $match_resident->getId(),
+                ));
+            }else{
+                $this->addFlash('success', 'search.not_found');
+                return $this->render('event/search.html.twig', array(
+                    'register' => $resident,
+                    'form' => $form->createView(),
+                    'event' => $event,
+                ));
+            }
+
+            return $this->redirectToRoute('register_show_detail', array(
+                        'resident_id' => $resident->getId(),
+            ));
+        }
+
+        return $this->render('event/search.html.twig', array(
+                    'register' => $resident,
+                    'form' => $form->createView(),
+                    'event' => $event,
+        ));
+    }
+
 }

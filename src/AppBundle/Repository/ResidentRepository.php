@@ -37,4 +37,16 @@ class ResidentRepository extends EntityRepository
     {
         $this->queryLatest()->getResult();
     }
+    public function getOneResidentBySearch($firstName, $lastName, $email){
+        $query = $this->getEntityManager()->createQuery(
+            'SELECT p from AppBundle:Resident p
+             WHERE p.firstName = :firstName AND
+                   p.lastName  = :lastName  AND
+                   p.email     = :email
+            '            
+        )->setParameter('firstName', $firstName)
+         ->setParameter('lastName', $lastName)
+         ->setParameter('email', $email);
+        return $query->getOneOrNullResult();
+    }
 }
